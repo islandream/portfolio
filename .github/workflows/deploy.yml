@@ -1,0 +1,36 @@
+name: Deploy Flutter Web to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # main 브랜치에 푸시될 때 자동 실행
+
+
+permissions:
+  contents: write  # GitHub Actions가 저장소에 푸시할 수 있도록 권한 부여
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.x"  # Flutter 버전에 맞게 수정 가능
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Flutter Web with base-href
+        run: flutter build web --release --base-href="/andyportfolio/"
+
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          force_orphan: true  # gh-pages 브랜치를 독립적으로 관리

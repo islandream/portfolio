@@ -1,0 +1,14 @@
+
+깃헙 주소가 아래와 같아서
+https://islandream.github.io/portfolio/
+
+아래 명령어로 빌드해야 제대로 작동한다.
+flutter build web --base-href="/portfolio/"
+
+.github/workflows/deploy.yml (git Action 파일 :자동배포)파일 안에도
+위 명령어로 빌드하도록 해줘야한다.
+
+VideoPlayer에서 source를 assets 가 아닌 networkurl로 받아오게 해놨다.
+이유: 디버깅할땐 잘 나오는데 웹에 올려놓으면 안나옴.
+그래서 영상을 추가하려면 웹git에서 직접 gh-page 브랜치의 assets/assset/clip 안에다가 업로드 해줘야한다.
+

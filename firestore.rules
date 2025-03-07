@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 모든 사람이 읽을 수 있도록 허용
+    match /visitors/{date} {
+      allow read: if true; // 🔥 누구나 방문자 데이터를 읽을 수 있음
+
+      // 🔥 방문자 수 업데이트만 가능 (덮어쓰기, 삭제 차단)
+      allow update: if request.resource.data.keys().hasOnly(['count'])
+                    && request.resource.data.count is int
+                    && request.resource.data.count > resource.data.count;
+
+      // 🔥 새 방문 기록을 추가하는 것은 허용
+      allow create: if request.resource.data.keys().hasOnly(['count'])
+                    && request.resource.data.count is int
+                    && request.resource.data.count > 0;
+
+      // 🔥 삭제 방지
+      allow delete: if false;
+    }
+  }
+}

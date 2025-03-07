@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",  // ✅ 컴파일된 파일을 다른 폴더에 저장
+    "rootDir": "./src", // ✅ 소스 폴더 지정
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "lib"]
+}
