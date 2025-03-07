@@ -44,7 +44,7 @@ class _Page6State extends State<Page6> {
       });
     });
 
-    _controller_1 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/give_heart.mp4"))
+    _controller_1 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/andyportfolio/assets/assets/clips/give_heart.mp4"))
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
@@ -52,7 +52,7 @@ class _Page6State extends State<Page6> {
       ..setVolume(0)
       ..setLooping(true)
       ..play();
-    _controller_2 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/give_gift.mp4"))
+    _controller_2 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/andyportfolio/assets/assets/clips/give_gift.mp4"))
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
@@ -60,7 +60,7 @@ class _Page6State extends State<Page6> {
       ..setVolume(0)
       ..setLooping(true)
       ..play();
-    _controller_3 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/take_heart.mp4"))
+    _controller_3 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/andyportfolio/assets/assets/clips/take_heart.mp4"))
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

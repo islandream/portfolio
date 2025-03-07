@@ -32,7 +32,7 @@ class _Page3State extends State<Page3> {
 
     controllerList = List.generate(
         7,
-        (index) => VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/ll_${index + 1}.mp4"))
+        (index) => VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/andyportfolio/assets/assets/clips/ll_${index + 1}.mp4"))
           ..initialize().then((_) {
             // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
             setState(() {});
