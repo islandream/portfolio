@@ -26,7 +26,7 @@ jobs:
         run: flutter pub get
 
       - name: Build Flutter Web with base-href
-        run: flutter build web --release --base-href="/andyportfolio/"
+        run: flutter build web --release --base-href="/portfolio/"
 
 
       - name: Deploy to GitHub Pages
