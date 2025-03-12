@@ -195,6 +195,11 @@ class CubeTest extends FlameGame with DragCallbacks {
 
     add(textComponent);
 
+    //초기값 설정
+    rotateYaxis(0.785);
+    rotateXaxis(0.65);
+    setZIndex();
+
     return super.onLoad();
   }
 

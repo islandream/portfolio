@@ -1,6 +1,6 @@
 
 깃헙 주소가 아래와 같아서
-https://islandream.github.io/andyportfolio/
+https://islandream.github.io/portfolio/
 
 아래 명령어로 빌드해야 제대로 작동한다.
 flutter build web --base-href="/portfolio/"
