@@ -53,7 +53,20 @@ class _Page9State extends State<Page9> {
         child: Center(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: andy(20)),
-            child: "감사합니다.".text.white.size(andy(50)).make(),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                "위 작업물들 중 특히 예전것들은, 디자인적으로 조잡하고 별로이지만"
+                        "\n"
+                        "지금도 계속 배우고 성장하고 있습니다.\n "
+                    .text
+                    .white
+                    .center
+                    .size(andy(30))
+                    .make(),
+                "감사합니다.".text.white.size(andy(50)).make(),
+              ],
+            ),
           ),
         ),
       ),
