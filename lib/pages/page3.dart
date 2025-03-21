@@ -191,7 +191,7 @@ class _Page3State extends State<Page3> {
                         "대규모 앱 리뉴얼 경험,\n"
                                 '안드로이드 버전 상승 대응,\n'
                                 '구글 정책 변경 대응,\n'
-                                '수 만건의 VOC 모니터링 및 대응\n'
+                                '수 만건의 문의사항, VOC 직접 대응\n'
                                 'Firebase Crashlytics를 통한 ANR 안정화\n'
                                 '신규 기능 지속적 추가'
                             .text

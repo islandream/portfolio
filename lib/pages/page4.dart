@@ -79,15 +79,15 @@ class _Page4State extends State<Page4> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "2. 캐쥬얼 디펜스 게임 :".text.white.center.size(andy(isMobile? 40:35)).bold.make(),
-                    " Duck Shower TD".text.white.center.size(andy(isMobile? 40:35)).make(),
+                    "2. 캐쥬얼 디펜스 게임 :".text.white.center.size(andy(isMobile ? 40 : 35)).bold.make(),
+                    " Duck Shower TD".text.white.center.size(andy(isMobile ? 40 : 35)).make(),
                   ],
                 ),
                 Gap(andy(20)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Image.asset("assets/duck_shower_logo.png", width: andy(isMobile? 300 : 250)),
+                    Image.asset("assets/duck_shower_logo.png", width: andy(isMobile ? 300 : 250)),
                     "<플레이 영상>".text.white.center.size(andy(20)).make(),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(andy(30)),
@@ -245,7 +245,7 @@ class _Page4State extends State<Page4> {
                           "Isometric 타일 맵 시스템 직접 구현".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           "타워와 캐릭터 80% 이상 직접 드로잉".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           "길찾기 로직 구현".text.white.center.size(andy(25)).align(TextAlign.left).make(),
-                          "여러 방법을 통한 프레임(성능) 최적화".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "다양한 방법을 통한 프레임(성능) 최적화".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                         ],
                       ),
                     ),
