@@ -83,6 +83,8 @@ class _Page4State extends State<Page4> {
                     " Duck Shower TD".text.white.center.size(andy(isMobile ? 40 : 35)).make(),
                   ],
                 ),
+                Gap(andy(5)),
+                "(Flutter 제작)".text.white.center.size(andy(isMobile ? 40 : 35)).make(),
                 Gap(andy(20)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,7 +94,7 @@ class _Page4State extends State<Page4> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(andy(30)),
                       child: SizedBox(
-                        width: screenRatio < 0.7 ? screenWidth * 0.9 : screenWidth * 0.6,
+                        width: screenRatio < 0.7 ? screenWidth * 0.9 : screenWidth * 0.5,
                         child: YoutubePlayer(
                           controller: _controller,
                           aspectRatio: 16 / 9,
