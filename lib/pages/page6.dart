@@ -179,7 +179,7 @@ class _Page6State extends State<Page6> {
                         children: [
                           "2014년.".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),
-                          "Android Native (JAVA)".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "Android Native".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),
                           "기획, 디자인, 개발, 스토어 배포, 마케팅".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           "(서버 파트를 제외한 일체)".text.white.center.size(andy(25)).align(TextAlign.left).make(),

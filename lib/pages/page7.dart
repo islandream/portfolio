@@ -57,8 +57,8 @@ class _Page7State extends State<Page7> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "5. 캐쥬얼 게임 :".text.white.size(andy(isMobile? 40:35)).bold.make(),
-                    " ZigZagUp! (멀티 플레이)".text.white.size(andy(isMobile? 40:35)).make(),
+                    "5. 캐쥬얼 게임 :".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
+                    " ZigZagUp! (멀티 플레이)".text.white.size(andy(isMobile ? 40 : 35)).make(),
                   ],
                 ),
                 Gap(andy(30)),
@@ -136,7 +136,7 @@ class _Page7State extends State<Page7> {
                         children: [
                           "2015년.".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),
-                          "Android Native (JAVA)".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "Android Native".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),
                           "1인 개발".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),

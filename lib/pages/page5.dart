@@ -58,8 +58,8 @@ class _Page5State extends State<Page5> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "3. 캐쥬얼 데이팅 앱 :".text.center.size(andy(isMobile? 40:35)).bold.make(),
-                    " 다함께 소개팅 (다운로드 10만+)".text.center.size(andy(isMobile? 40:35)).make(),
+                    "3. 캐쥬얼 데이팅 앱 :".text.center.size(andy(isMobile ? 40 : 35)).bold.make(),
+                    " 다함께 소개팅 (다운로드 10만+)".text.center.size(andy(isMobile ? 40 : 35)).make(),
                   ],
                 ),
                 "(현재 서비스 종료)".text.size(andy(20)).make(),
@@ -98,7 +98,7 @@ class _Page5State extends State<Page5> {
                         children: [
                           "2016년.".text.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),
-                          "Android Native (JAVA)".text.center.size(andy(25)).align(TextAlign.left).make(),
+                          "Android Native".text.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),
                           "1인개발. (기획, 디자인, 개발, 배포, 마케팅)".text.center.size(andy(25)).align(TextAlign.left).make(),
                           Gap(andy(21)),
