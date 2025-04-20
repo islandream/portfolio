@@ -79,11 +79,12 @@ class _Page6State extends State<Page6> {
       child: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFF988ab4), Color(0xFF876fb7), Color(0xFF988ab4)],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
+          // gradient: LinearGradient(
+          //   colors: [Color(0xFF988ab4), Color(0xFF876fb7), Color(0xFF988ab4)],
+          //   begin: Alignment.topRight,
+          //   end: Alignment.bottomLeft,
+          // ),
+          color: Colors.black26,
         ),
         child: Center(
           child: Container(

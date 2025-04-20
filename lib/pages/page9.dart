@@ -58,7 +58,7 @@ class _Page9State extends State<Page9> {
               children: [
                 "위 작업물들 중 특히 예전것들은, 디자인적으로 부족하지만"
                         "\n"
-                        "지금도 계속 배우고 성장하고 있으며 훨씬 세련된 디자인 가능합니다.\n "
+                        "지금은 최신 트렌드에 맞춘, 모던한 디자인 가능합니다.\n "
                     .text
                     .white
                     .center

@@ -42,11 +42,12 @@ class _Page5State extends State<Page5> {
       child: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFfce070), Color(0xFFffcc00), Color(0xFFfce070)],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
+          // gradient: LinearGradient(
+          //   colors: [Color(0xFFfce070), Color(0xFFffcc00), Color(0xFFfce070)],
+          //   begin: Alignment.topRight,
+          //   end: Alignment.bottomLeft,
+          // ),
+          color: Colors.white,
         ),
         child: Center(
           child: Container(

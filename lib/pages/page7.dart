@@ -41,11 +41,12 @@ class _Page7State extends State<Page7> {
       child: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color(0xFFacd3d5), Color(0xFF3dc5ce), Color(0xFFacd3d5)],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
+          // gradient: LinearGradient(
+          //   colors: [Color(0xFFacd3d5), Color(0xFF3dc5ce), Color(0xFFacd3d5)],
+          //   begin: Alignment.topRight,
+          //   end: Alignment.bottomLeft,
+          // ),
+          color: Colors.green,
         ),
         child: Center(
           child: Container(
