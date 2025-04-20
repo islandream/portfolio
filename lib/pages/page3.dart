@@ -63,6 +63,7 @@ class _Page3State extends State<Page3> {
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
           ),
+          //color: Colors.black87,
         ),
         child: Center(
           child: Container(
@@ -74,10 +75,12 @@ class _Page3State extends State<Page3> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "1. 데이팅 앱 :".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
-                    " 러브레터 (다운로드 100만 이상)".text.white.size(andy(isMobile ? 40 : 35)).make(),
+                    "1 ".text.white.size(andy(isMobile ? 50 : 40)).bold.make(),
+                    "데이팅 앱 ".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
+                    " 러브레터".text.white.size(andy(isMobile ? 40 : 35)).make(),
                   ],
                 ),
+                " 누적 다운로드 100만 이상".text.white.size(andy(isMobile ? 35 : 30)).make(),
                 Gap(andy(50)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -154,20 +157,22 @@ class _Page3State extends State<Page3> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        "- 작업 년도 :".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                        "작업 년도 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
                         " ".text.size(andy(25)).make(),
-                        "- 프레임워크 :".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                        "프레임워크 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
                         " ".text.size(andy(25)).make(),
-                        "- 담당 포지션 :".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
-                        " ".text.size(andy(25)).make(),
-                        " ".text.size(andy(25)).make(),
-                        "- 구현한 주요 기능 :".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                        "담당 포지션 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
                         " ".text.size(andy(25)).make(),
                         " ".text.size(andy(25)).make(),
+                        Gap(andy(2)),
+                        "구현한 주요 기능 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
                         " ".text.size(andy(25)).make(),
                         " ".text.size(andy(25)).make(),
                         " ".text.size(andy(25)).make(),
-                        "- 10년 이상 앱 보수 :".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                        " ".text.size(andy(25)).make(),
+                        " ".text.size(andy(25)).make(),
+                        Gap(andy(7)),
+                        "10년 이상 앱 보수 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
                       ],
                     ),
                     Gap(andy(40)),
@@ -177,20 +182,20 @@ class _Page3State extends State<Page3> {
                       children: [
                         "2024년 (기존 앱을 전체 리뉴얼)".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
                         " ".text.size(andy(25)).make(),
-                        "Android Native 개발 후 Flutter로 컨버전 (99% 완료).".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                        "Android Native 개발 후 Flutter로 컨버전 (99% 완료)".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
                         " ".text.size(andy(25)).make(),
-                        "기획, 디자인, Front-end 개발, 스토어 배포, 마케팅.".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                        "기획, 디자인, Front-end 개발, 스토어 배포, 마케팅".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
                         "(Back-end 를 제외한 일체)".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
                         " ".text.size(andy(25)).make(),
-                        "회원 가입, 로그인, 프로필 내용 등록,".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
-                        "회원간 채팅 기능, 인앱 결제, PUSH 알림,".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
-                        "사진 업로드, 게시글 업로드,".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
-                        "휴대폰 본인 인증 연동,".text.white.size(andy(25)).align(TextAlign.right).make(),
-                        "여러가지 UI 애니메이션 직접 구현 등.".text.white.size(andy(25)).align(TextAlign.right).make(),
+                        "회원 가입, 로그인, 프로필 내용 등록".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                        "회원간 채팅 기능, 인앱 결제, PUSH 알림".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                        "사진 업로드, 게시글 업로드".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                        "휴대폰 본인 인증 연동".text.white.size(andy(25)).align(TextAlign.right).make(),
+                        "여러가지 UI 애니메이션 직접 구현 등".text.white.size(andy(25)).align(TextAlign.right).make(),
                         " ".text.size(andy(25)).make(),
-                        "대규모 앱 리뉴얼 경험,\n"
-                                '안드로이드 버전 상승 대응,\n'
-                                '구글 정책 변경 대응,\n'
+                        "대규모 앱 리뉴얼 경험\n"
+                                '안드로이드 버전 상승 대응\n'
+                                '구글 정책 변경 대응\n'
                                 '수 만건의 문의사항, VOC 직접 대응\n'
                                 'Firebase Crashlytics를 통한 ANR 안정화\n'
                                 '신규 기능 지속적 추가'
@@ -200,7 +205,7 @@ class _Page3State extends State<Page3> {
                             .size(andy(25))
                             .align(TextAlign.left)
                             .make(),
-                        ' - 지인 피하기 기능,\n - 휴대폰 본인인증,\n - 추천인 등록시 리워드 지급기능,\n - 셀프 소개팅 기능,\n - 계절에 따른 테마 변경 기능 등.'
+                        '  지인 피하기 기능\n  휴대폰 본인인증\n  추천인 등록시 리워드 지급기능\n  셀프 소개팅 기능\n  계절에 따른 테마 변경 기능 등'
                             .text
                             .white
                             .center

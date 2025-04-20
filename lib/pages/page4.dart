@@ -79,18 +79,18 @@ class _Page4State extends State<Page4> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "2. 캐쥬얼 디펜스 게임 :".text.white.center.size(andy(isMobile ? 40 : 35)).bold.make(),
+                    "2 ".text.white.center.size(andy(isMobile ? 50 : 40)).bold.make(),
+                    " 캐쥬얼 디펜스 게임 ".text.white.center.size(andy(isMobile ? 40 : 35)).bold.make(),
                     " Duck Shower TD".text.white.center.size(andy(isMobile ? 40 : 35)).make(),
                   ],
                 ),
                 Gap(andy(5)),
-                "(Flutter 제작)".text.white.center.size(andy(isMobile ? 40 : 35)).make(),
+                "<Flutter>".text.white.center.size(andy(isMobile ? 40 : 35)).make(),
                 Gap(andy(20)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset("assets/duck_shower_logo.png", width: andy(isMobile ? 300 : 250)),
-                    "<플레이 영상>".text.white.center.size(andy(20)).make(),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(andy(30)),
                       child: SizedBox(
@@ -218,13 +218,13 @@ class _Page4State extends State<Page4> {
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            "- 작업 년도 :".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                            " 작업 년도 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
                             Gap(andy(20)),
-                            "- 프레임워크 :".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
+                            " 프레임워크 ".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
                             Gap(andy(20)),
-                            "- 담당 포지션 :".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
+                            " 담당 포지션 ".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
                             Gap(andy(20)),
-                            "- 구현한 주요 기능 :".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
+                            " 구현한 주요 기능 ".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
                           ],
                         )),
                     Gap(andy(20)),
@@ -242,7 +242,7 @@ class _Page4State extends State<Page4> {
                           Gap(andy(21)),
                           "Google Play Game Service 연동".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           "(로그인, 게임 저장/불러오기, 리더보드 등)".text.white.center.size(andy(25)).align(TextAlign.left).make(),
-                          "Admob 광고 연동 (배너/전면 광고),".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "Admob 광고 연동 (배너/전면 광고)".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           "인앱 결제 연동".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           "Isometric 타일 맵 시스템 직접 구현".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                           "타워와 캐릭터 80% 이상 직접 드로잉".text.white.center.size(andy(25)).align(TextAlign.left).make(),
