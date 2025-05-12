@@ -56,14 +56,8 @@ class _Page9State extends State<Page9> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                "위 작업물들 중 특히 예전것들은, 디자인적으로 부족하지만"
-                        "\n"
-                        "지금은 최신 트렌드에 맞춘, 모던한 디자인 가능합니다.\n "
-                    .text
-                    .white
-                    .center
-                    .size(andy(30))
-                    .make(),
+                "지금도 여러 채널을 통해 Flutter를 포함한 모바일 앱 개발에 대한\n최신 기술과 동향을 계속 학습 중에 있습니다.".text.white.center.size(andy(30)).make(),
+                Gap(andy(10)),
                 "감사합니다.".text.white.size(andy(50)).make(),
               ],
             ),

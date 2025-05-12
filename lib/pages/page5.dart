@@ -42,12 +42,12 @@ class _Page5State extends State<Page5> {
       child: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          // gradient: LinearGradient(
-          //   colors: [Color(0xFFfce070), Color(0xFFffcc00), Color(0xFFfce070)],
-          //   begin: Alignment.topRight,
-          //   end: Alignment.bottomLeft,
-          // ),
-          color: Colors.white,
+          gradient: LinearGradient(
+            colors: [Color(0xffcc7108), Color(0xffea9d44)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          //color: Colors.white,
         ),
         child: Center(
           child: Container(
@@ -59,58 +59,104 @@ class _Page5State extends State<Page5> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "3 ".text.center.size(andy(isMobile ? 40 : 35)).bold.make(),
-                    " 캐쥬얼 데이팅 앱 ".text.center.size(andy(isMobile ? 40 : 35)).bold.make(),
-                    " 다함께 소개팅".text.center.size(andy(isMobile ? 35 : 30)).make(),
+                    " 캐쥬얼 데이팅 앱 ".text.center.size(andy(isMobile ? 40 : 35)).white.bold.make(),
+                    " 다함께 소개팅".text.center.size(andy(isMobile ? 35 : 30)).white.make(),
                   ],
                 ),
-                "다운로드 10만+".text.center.size(andy(isMobile ? 25 : 20)).make(),
+                "다운로드 10만+".text.center.size(andy(isMobile ? 25 : 20)).white.make(),
                 Gap(andy(30)),
                 Image.asset(
                   "assets/modu.jpg",
                   width: screenRatio < 0.7 ? screenWidth * 0.9 : screenWidth * 0.6,
                 ),
                 Gap(andy(40)),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Gap(andy(20)),
-                    Flexible(
-                        flex: 1,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            " 제작 년도 ".text.center.size(andy(25)).align(TextAlign.right).bold.make(),
-                            Gap(andy(5)),
-                            " 프레임워크 ".text.center.size(andy(25)).align(TextAlign.right).bold.make(),
-                            Gap(andy(5)),
-                            " 담당 포지션 ".text.center.size(andy(25)).align(TextAlign.right).bold.make(),
-                            Gap(andy(5)),
-                            " 서비스 종료 사유 ".text.center.size(andy(25)).align(TextAlign.right).bold.make(),
-                          ],
-                        )),
-                    Gap(andy(20)),
-                    Flexible(
-                      flex: 2,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(andy(20)),
+                    color: Colors.black.withValues(alpha: 0.2),
+                  ),
+                  width: andy(850),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
                         children: [
-                          "2016년.".text.center.size(andy(25)).align(TextAlign.left).make(),
-                          Gap(andy(6)),
-                          "Android Native".text.center.size(andy(25)).align(TextAlign.left).make(),
-                          Gap(andy(6)),
-                          "1인개발. (기획, 디자인, 개발, 배포, 마케팅)".text.center.size(andy(25)).align(TextAlign.left).make(),
-                          Gap(andy(6)),
-                          "앱 퀄리티 미흡, 관리 미흡, 마케팅 미흡".text.center.size(andy(25)).align(TextAlign.left).make(),
+                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
+                          SizedBox(width: andy(10)),
+                          "작업 년도".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
                         ],
                       ),
-                    ),
-                  ],
+                      SizedBox(height: andy(5)),
+                      Row(
+                        children: [
+                          SizedBox(width: andy(19)),
+                          "2016년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                Gap(screenHeight / 10),
+                SizedBox(height: andy(20)),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(andy(20)),
+                    color: Colors.black.withValues(alpha: 0.2),
+                  ),
+                  width: andy(850),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
+                          SizedBox(width: andy(10)),
+                          "프레임 워크".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
+                        ],
+                      ),
+                      SizedBox(height: andy(5)),
+                      Row(
+                        children: [
+                          SizedBox(width: andy(19)),
+                          "Android Native".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: andy(20)),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(andy(20)),
+                    color: Colors.black.withValues(alpha: 0.2),
+                  ),
+                  width: andy(850),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
+                          SizedBox(width: andy(10)),
+                          "담당 포지션".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
+                        ],
+                      ),
+                      SizedBox(height: andy(5)),
+                      Row(
+                        children: [
+                          SizedBox(width: andy(19)),
+                          "기획, 디자인, 개발, 배포, 마케팅  (Back-end 제외)".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: andy(50)),
               ],
             ),
           ),

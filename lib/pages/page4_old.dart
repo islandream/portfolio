@@ -246,135 +246,53 @@ class _Page4State extends State<Page4> {
                   ],
                 ),
                 Gap(andy(40)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Gap(andy(20)),
+                    Flexible(
+                        flex: 1,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            " 작업 년도 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                            Gap(andy(20)),
+                            " 프레임워크 ".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
+                            Gap(andy(20)),
+                            " 담당 포지션 ".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
+                            Gap(andy(20)),
+                            " 구현한 주요 기능 ".text.white.center.size(andy(25)).align(TextAlign.right).bold.make(),
+                          ],
+                        )),
+                    Gap(andy(20)),
+                    Flexible(
+                      flex: 2,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "작업 년도".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
+                          "2024년.".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          Gap(andy(21)),
+                          "Flutter (with Flame Package).".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          Gap(andy(21)),
+                          "1인개발. (기획, 디자인, 개발, 스토어 배포)".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          Gap(andy(21)),
+                          "Google Play Game Service 연동".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "(로그인, 게임 저장/불러오기, 리더보드 등)".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "Admob 광고 연동 (배너/전면 광고)".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "인앱 결제 연동".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "Isometric 타일 맵 시스템 직접 구현".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "타워와 캐릭터 80% 이상 직접 드로잉".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "길찾기 로직 구현".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          "다양한 방법을 통한 프레임(성능) 최적화".text.white.center.size(andy(25)).align(TextAlign.left).make(),
                         ],
                       ),
-                      SizedBox(height: andy(5)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          "2024년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                        ],
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "프레임 워크".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(5)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          "Flutter (with Flame Package)".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "담당 포지션".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(5)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          "1인개발. (기획, 디자인, 개발, 스토어 배포)".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(25), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "구현한 주요 기능".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(10)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              "Google Play Game Service 연동".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                              "(로그인, 게임 저장/불러오기, 리더보드 등)".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                              "Admob 광고 연동 (배너/전면 광고)".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                              "인앱 결제 연동".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                              "Isometric 타일 맵 시스템 직접 구현".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                              "타워와 캐릭터 80% 이상 직접 드로잉".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                              "길찾기 로직 구현".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                              "다양한 방법을 통한 프레임(성능) 최적화".text.white.center.size(andy(20)).align(TextAlign.left).make(),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Gap(andy(50)),
+                Gap(andy(30)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

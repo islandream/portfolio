@@ -54,7 +54,7 @@ class _TitleBarState extends State<TitleBar> {
               children: [
                 Row(
                   children: [
-                    "프론트엔드 개발자 ".text.white.size(isMobile ? 13 : 15).make(),
+                    "모바일 개발자 ".text.white.size(isMobile ? 13 : 15).make(),
                     "신현우 ".text.white.size(isMobile ? 13 : 15).bold.make(),
                     "의 포트폴리오 입니다.".text.white.size(isMobile ? 13 : 15).make(),
                   ],

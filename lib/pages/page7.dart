@@ -58,8 +58,7 @@ class _Page7State extends State<Page7> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "5 ".text.white.size(andy(isMobile ? 50 : 40)).bold.make(),
-                    " 캐쥬얼 게임 :".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
+                    "캐쥬얼 게임 :".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
                     " ZigZagUp! ".text.white.size(andy(isMobile ? 40 : 35)).make(),
                     " 멀티 플레이".text.white.size(andy(isMobile ? 30 : 25)).make(),
                   ],
@@ -110,44 +109,120 @@ class _Page7State extends State<Page7> {
                   ],
                 ),
                 Gap(andy(40)),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Gap(andy(20)),
-                    Flexible(
-                        flex: 1,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            " 제작 년도 ".text.center.white.size(andy(25)).align(TextAlign.right).bold.make(),
-                            Gap(andy(5)),
-                            " 프레임워크 ".text.center.white.size(andy(25)).align(TextAlign.right).bold.make(),
-                            Gap(andy(5)),
-                            " 담당 포지션 ".text.center.white.size(andy(25)).align(TextAlign.right).bold.make(),
-                            Gap(andy(5)),
-                            " 특징 ".text.center.white.size(andy(25)).align(TextAlign.right).bold.make(),
-                          ],
-                        )),
-                    Gap(andy(20)),
-                    Flexible(
-                      flex: 2,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(andy(20)),
+                    color: Colors.black.withValues(alpha: 0.2),
+                  ),
+                  width: andy(850),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
                         children: [
-                          "2015년.".text.white.center.size(andy(25)).align(TextAlign.left).make(),
-                          Gap(andy(6)),
-                          "Android Native".text.white.center.size(andy(25)).align(TextAlign.left).make(),
-                          Gap(andy(6)),
-                          "1인 개발".text.white.center.size(andy(25)).align(TextAlign.left).make(),
-                          Gap(andy(6)),
-                          "멀티 플레이 지원으로 무작위 상대와 1:1 대결 가능.\n상당한 손맛과 속도감.".text.white.center.size(andy(25)).align(TextAlign.left).make(),
+                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
+                          SizedBox(width: andy(10)),
+                          "작업 년도".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
                         ],
                       ),
-                    ),
-                  ],
+                      SizedBox(height: andy(5)),
+                      Row(
+                        children: [
+                          SizedBox(width: andy(19)),
+                          "2015년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: andy(20)),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(andy(20)),
+                    color: Colors.black.withValues(alpha: 0.2),
+                  ),
+                  width: andy(850),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
+                          SizedBox(width: andy(10)),
+                          "프레임 워크".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
+                        ],
+                      ),
+                      SizedBox(height: andy(5)),
+                      Row(
+                        children: [
+                          SizedBox(width: andy(19)),
+                          "Android Native".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: andy(20)),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(andy(20)),
+                    color: Colors.black.withValues(alpha: 0.2),
+                  ),
+                  width: andy(850),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
+                          SizedBox(width: andy(10)),
+                          "담당 포지션".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
+                        ],
+                      ),
+                      SizedBox(height: andy(5)),
+                      Row(
+                        children: [
+                          SizedBox(width: andy(19)),
+                          "1인 개발".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: andy(20)),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(andy(20)),
+                    color: Colors.black.withValues(alpha: 0.2),
+                  ),
+                  width: andy(850),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
+                          SizedBox(width: andy(10)),
+                          "특징".text.white.ellipsis.size(andy(20)).bold.make(),
+                        ],
+                      ),
+                      SizedBox(height: andy(5)),
+                      Row(
+                        children: [
+                          SizedBox(width: andy(19)),
+                          "멀티 플레이 지원으로 무작위 상대와 1:1 대결 가능.\n상당한 손맛과 속도감.".text.white.ellipsis.size(andy(20)).make(),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 Gap(screenHeight / 10),
               ],

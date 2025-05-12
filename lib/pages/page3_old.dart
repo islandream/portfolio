@@ -79,7 +79,7 @@ class _Page3State extends State<Page3> {
                     " 러브레터".text.white.size(andy(isMobile ? 40 : 35)).make(),
                   ],
                 ),
-                "누적 다운로드 100만 이상".text.white.size(andy(isMobile ? 30 : 25)).make(),
+                " 누적 다운로드 100만 이상".text.white.size(andy(isMobile ? 30 : 25)).make(),
                 Gap(andy(50)),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -149,181 +149,71 @@ class _Page3State extends State<Page3> {
                 screenRatio < 0.7 ? getClipsVertical() : getClipsHorizontal(),
                 Gap(andy(50)),
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Row(
                     mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "작업 년도".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(5)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          "2024년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      Row(
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "프레임 워크".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
+                          "작업 년도 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                          " ".text.size(andy(25)).make(),
+                          "프레임워크 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                          " ".text.size(andy(25)).make(),
+                          "담당 포지션 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                          " ".text.size(andy(25)).make(),
+                          " ".text.size(andy(25)).make(),
+                          Gap(andy(2)),
+                          "구현한 주요 기능 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
+                          " ".text.size(andy(25)).make(),
+                          " ".text.size(andy(25)).make(),
+                          " ".text.size(andy(25)).make(),
+                          " ".text.size(andy(25)).make(),
+                          " ".text.size(andy(25)).make(),
+                          Gap(andy(7)),
+                          "10년 이상 앱 보수 ".text.white.ellipsis.size(andy(25)).align(TextAlign.right).bold.make(),
                         ],
                       ),
-                      SizedBox(height: andy(5)),
-                      Row(
+                      Gap(andy(40)),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          SizedBox(width: andy(19)),
-                          "Android Native".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                          SizedBox(width: andy(5)),
-                          Icon(Icons.double_arrow, color: Colors.white, size: andy(20)),
-                          SizedBox(width: andy(5)),
-                          "Flutter 컨버전".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                          "2024년 (기존 앱을 전체 리뉴얼)".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                          " ".text.size(andy(25)).make(),
+                          "Android Native 개발 후 Flutter로 컨버전 (99% 완료)".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                          " ".text.size(andy(25)).make(),
+                          "기획, 디자인, Front-end 개발, 스토어 배포, 마케팅".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                          "(Back-end 를 제외한 일체)".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                          " ".text.size(andy(25)).make(),
+                          "회원 가입, 로그인, 프로필 내용 등록".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                          "회원간 채팅 기능, 인앱 결제, PUSH 알림".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                          "사진 업로드, 게시글 업로드".text.white.ellipsis.size(andy(25)).align(TextAlign.right).make(),
+                          "휴대폰 본인 인증 연동".text.white.size(andy(25)).align(TextAlign.right).make(),
+                          "여러가지 UI 애니메이션 직접 구현 등".text.white.size(andy(25)).align(TextAlign.right).make(),
+                          " ".text.size(andy(25)).make(),
+                          "대규모 앱 리뉴얼 경험\n"
+                                  '안드로이드 버전 상승 대응\n'
+                                  '구글 정책 변경 대응\n'
+                                  '수 만건의 문의사항, VOC 직접 대응\n'
+                                  'Firebase Crashlytics를 통한 ANR 안정화\n'
+                                  '신규 기능 지속적 추가'
+                              .text
+                              .white
+                              .center
+                              .size(andy(25))
+                              .align(TextAlign.left)
+                              .make(),
+                          '  지인 피하기 기능\n  휴대폰 본인인증\n  추천인 등록시 리워드 지급기능\n  셀프 소개팅 기능\n  계절에 따른 테마 변경 기능 등'
+                              .text
+                              .white
+                              .center
+                              .size(andy(20))
+                              .align(TextAlign.left)
+                              .make(),
                         ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "담당 포지션".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(5)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          "기획, 디자인, Front-end 개발, 스토어 배포, 마케팅".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "구현한 주요 기능".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(10)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              "회원 가입, 로그인/아웃, 자동로그인, 계정 휴면 설정, 알람 종류/시간 설정".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                              "프로필 사진 및 내용 등록, 직업/직장/학력 인증 시스템, 좋아하는 영화 등록 (API 연동)".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                              "회원 간 좋아요 송수신, 채팅 기능, 매력 점수 평가, 회원 차단/신고 기능".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                              "공지사항, 강제 업데이트, 1:1 Q/A".text.white.size(andy(20)).align(TextAlign.right).make(),
-                              "휴대폰 본인 인증 연동".text.white.size(andy(20)).align(TextAlign.right).make(),
-                              "게시글 업로드, 게시글 좋아요".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                              "인앱 결제, PUSH 알림(FCM)".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                              "지인 피하기 기능, 추천인 등록시 리워드 지급, 화면잠금 기능".text.white.size(andy(20)).align(TextAlign.right).make(),
-                              "다양한 UI 애니메이션 직접 구현".text.white.size(andy(20)).align(TextAlign.right).make(),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "그 외 업무".text.white.ellipsis.size(andy(20)).align(TextAlign.right).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(5)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              "대규모 앱 리뉴얼 경험\n"
-                                      '안드로이드 버전 상승 대응\n'
-                                      '구글 정책 변경 대응\n'
-                                      '수 만건의 유저 문의사항, VOC 직접 대응\n'
-                                      'Firebase Crashlytics를 통한 ANR 안정화\n'
-                                      '신규 기능 지속적 추가'
-                                  .text
-                                  .white
-                                  .center
-                                  .size(andy(20))
-                                  .align(TextAlign.left)
-                                  .make(),
-                            ],
-                          ),
-                        ],
-                      ),
+                      )
                     ],
                   ),
                 ),
