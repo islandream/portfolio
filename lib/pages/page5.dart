@@ -43,7 +43,7 @@ class _Page5State extends State<Page5> {
         width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xffcc7108), Color(0xffea9d44)],
+            colors: [Color(0xff00af53), Color(0xff00cc52)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -59,15 +59,84 @@ class _Page5State extends State<Page5> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    " 캐쥬얼 데이팅 앱 ".text.center.size(andy(isMobile ? 40 : 35)).white.bold.make(),
-                    " 다함께 소개팅".text.center.size(andy(isMobile ? 35 : 30)).white.make(),
+                    " 영어 단어 및 표현 학습 크로스 퍼즐 ".text.center.size(andy(isMobile ? 40 : 35)).white.bold.make(),
                   ],
                 ),
-                "다운로드 10만+".text.center.size(andy(isMobile ? 25 : 20)).white.make(),
-                Gap(andy(30)),
-                Image.asset(
-                  "assets/modu.jpg",
-                  width: screenRatio < 0.7 ? screenWidth * 0.9 : screenWidth * 0.6,
+                Gap(andy(50)),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    screenRatio < 0.7
+                        ? Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ...List.generate(
+                                2,
+                                (index_v) => Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    ...List.generate(
+                                      2,
+                                      (index_h) => GestureDetector(
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (context) => AlertDialog(
+                                                backgroundColor: Colors.transparent,
+                                                insetPadding: EdgeInsets.zero,
+                                                contentPadding: EdgeInsets.zero,
+                                                content: Column(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    ClipRRect(
+                                                        borderRadius: BorderRadius.circular(andy(10)),
+                                                        child: Image.asset("assets/${index_h * 2 + index_v + 1}.jpg", width: screenWidth)),
+                                                    IconButton(
+                                                      onPressed: () => Navigator.pop(context),
+                                                      icon: Icon(
+                                                        Icons.close_rounded,
+                                                        color: Colors.white,
+                                                        size: andy(100),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )),
+                                          );
+                                        },
+                                        child: Padding(
+                                          padding: EdgeInsets.all(andy(10)),
+                                          child: ClipRRect(
+                                              borderRadius: BorderRadius.circular(andy(10)),
+                                              child: Image.asset("assets/${index_h * 2 + index_v + 1}.jpg", width: screenWidth * 0.45)),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        : Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ...List.generate(
+                                4,
+                                (index) {
+                                  return GestureDetector(
+                                      onTap: () {
+                                        showDialog(context: context, builder: (context) => ImageDialog(path: "assets/${index + 1}.jpg"));
+                                      },
+                                      child: Padding(
+                                        padding: EdgeInsets.all(andy(10)),
+                                        child: ClipRRect(
+                                            borderRadius: BorderRadius.circular(andy(10)),
+                                            child: Image.asset("assets/${index + 1}.jpg", width: andy(230))),
+                                      ));
+                                },
+                              )
+                            ],
+                          ),
+                  ],
                 ),
                 Gap(andy(40)),
                 Container(
@@ -92,7 +161,7 @@ class _Page5State extends State<Page5> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "2016년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                          "2025년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
                         ],
                       ),
                     ],
@@ -121,7 +190,7 @@ class _Page5State extends State<Page5> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "Android Native".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                          "Flutter".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
                         ],
                       ),
                     ],
@@ -150,7 +219,13 @@ class _Page5State extends State<Page5> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "기획, 디자인, 개발, 배포, 마케팅  (Back-end 제외)".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                          "1인 개발 (취미작)\n - 퍼즐 구조 자동 생성 알고리즘 개발\n - GPT API 를 이용한 단어 목록 생성"
+                              .text
+                              .white
+                              .ellipsis
+                              .size(andy(20))
+                              .align(TextAlign.left)
+                              .make(),
                         ],
                       ),
                     ],

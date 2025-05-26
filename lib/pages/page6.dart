@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:andy_portfolio/andy_button.dart';
+import 'package:andy_portfolio/andy_text.dart';
 import 'package:andy_portfolio/contents.dart';
 import 'package:andy_portfolio/image_dialog.dart';
 import 'package:andy_portfolio/youtube_play_dialog.dart';
@@ -10,7 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class Page6 extends StatefulWidget {
@@ -23,18 +23,6 @@ class Page6 extends StatefulWidget {
 class _Page6State extends State<Page6> {
   bool isShow = false;
 
-  late VideoPlayerController _controller_1;
-  late VideoPlayerController _controller_2;
-  late VideoPlayerController _controller_3;
-
-  @override
-  void dispose() {
-    _controller_1.dispose();
-    _controller_2.dispose();
-    _controller_3.dispose();
-    super.dispose();
-  }
-
   @override
   void initState() {
 // 위젯이 그려진 후 애니메이션 실행
@@ -43,31 +31,6 @@ class _Page6State extends State<Page6> {
         isShow = true;
       });
     });
-
-    _controller_1 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/give_heart.mp4"))
-      ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
-      })
-      ..setVolume(0)
-      ..setLooping(true)
-      ..play();
-    _controller_2 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/give_gift.mp4"))
-      ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
-      })
-      ..setVolume(0)
-      ..setLooping(true)
-      ..play();
-    _controller_3 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/take_heart.mp4"))
-      ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
-      })
-      ..setVolume(0)
-      ..setLooping(true)
-      ..play();
     super.initState();
   }
 
@@ -79,12 +42,12 @@ class _Page6State extends State<Page6> {
       child: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
-          // gradient: LinearGradient(
-          //   colors: [Color(0xFF988ab4), Color(0xFF876fb7), Color(0xFF988ab4)],
-          //   begin: Alignment.topRight,
-          //   end: Alignment.bottomLeft,
-          // ),
-          color: Colors.black26,
+          gradient: LinearGradient(
+            colors: [Color(0xffcc7108), Color(0xffea9d44)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          //color: Colors.white,
         ),
         child: Center(
           child: Container(
@@ -96,61 +59,15 @@ class _Page6State extends State<Page6> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    " 데이팅 앱 러브레터 Ver.1".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
-                    " : 리뉴얼 전 버전".text.white.size(andy(isMobile ? 30 : 25)).make(),
+                    " 캐쥬얼 데이팅 앱 ".text.center.size(andy(isMobile ? 40 : 35)).white.bold.make(),
+                    " 다함께 소개팅".text.center.size(andy(isMobile ? 35 : 30)).white.make(),
                   ],
                 ),
+                "다운로드 10만+".text.center.size(andy(isMobile ? 25 : 20)).white.make(),
                 Gap(andy(30)),
-                Image.asset("assets/loveletter_ver1_title.png", width: andy(180)),
-                Gap(andy(10)),
                 Image.asset(
-                  "assets/loveletter_ver1.png",
-                  width: screenRatio < 0.7 ? screenWidth * 0.7 : screenWidth * 0.4,
-                  fit: BoxFit.fitWidth,
-                ),
-                Gap(andy(30)),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(andy(30)),
-                      child: SizedBox(
-                        width: screenRatio < 0.7 ? screenWidth * 0.25 : screenWidth * 0.1,
-                        child: _controller_1.value.isInitialized
-                            ? AspectRatio(
-                                aspectRatio: _controller_1.value.aspectRatio,
-                                child: VideoPlayer(_controller_1),
-                              )
-                            : const CircularProgressIndicator(),
-                      ),
-                    ),
-                    Gap(andy(50)),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(andy(30)),
-                      child: SizedBox(
-                        width: screenRatio < 0.7 ? screenWidth * 0.25 : screenWidth * 0.1,
-                        child: _controller_2.value.isInitialized
-                            ? AspectRatio(
-                                aspectRatio: _controller_2.value.aspectRatio,
-                                child: VideoPlayer(_controller_2),
-                              )
-                            : const CircularProgressIndicator(),
-                      ),
-                    ),
-                    Gap(andy(50)),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(andy(30)),
-                      child: SizedBox(
-                        width: screenRatio < 0.7 ? screenWidth * 0.25 : screenWidth * 0.1,
-                        child: _controller_3.value.isInitialized
-                            ? AspectRatio(
-                                aspectRatio: _controller_3.value.aspectRatio,
-                                child: VideoPlayer(_controller_3),
-                              )
-                            : const CircularProgressIndicator(),
-                      ),
-                    ),
-                  ],
+                  "assets/modu.jpg",
+                  width: screenRatio < 0.7 ? screenWidth * 0.9 : screenWidth * 0.6,
                 ),
                 Gap(andy(40)),
                 Container(
@@ -175,7 +92,7 @@ class _Page6State extends State<Page6> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "2014년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                          "2016년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
                         ],
                       ),
                     ],
@@ -239,7 +156,7 @@ class _Page6State extends State<Page6> {
                     ],
                   ),
                 ),
-                Gap(screenHeight / 10),
+                SizedBox(height: andy(50)),
               ],
             ),
           ),

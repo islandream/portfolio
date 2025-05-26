@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class Page7 extends StatefulWidget {
@@ -22,6 +23,18 @@ class Page7 extends StatefulWidget {
 class _Page7State extends State<Page7> {
   bool isShow = false;
 
+  late VideoPlayerController _controller_1;
+  late VideoPlayerController _controller_2;
+  late VideoPlayerController _controller_3;
+
+  @override
+  void dispose() {
+    _controller_1.dispose();
+    _controller_2.dispose();
+    _controller_3.dispose();
+    super.dispose();
+  }
+
   @override
   void initState() {
 // 위젯이 그려진 후 애니메이션 실행
@@ -30,6 +43,31 @@ class _Page7State extends State<Page7> {
         isShow = true;
       });
     });
+
+    _controller_1 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/give_heart.mp4"))
+      ..initialize().then((_) {
+        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        setState(() {});
+      })
+      ..setVolume(0)
+      ..setLooping(true)
+      ..play();
+    _controller_2 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/give_gift.mp4"))
+      ..initialize().then((_) {
+        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        setState(() {});
+      })
+      ..setVolume(0)
+      ..setLooping(true)
+      ..play();
+    _controller_3 = VideoPlayerController.networkUrl(Uri.parse("https://islandream.github.io/portfolio/assets/assets/clips/take_heart.mp4"))
+      ..initialize().then((_) {
+        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        setState(() {});
+      })
+      ..setVolume(0)
+      ..setLooping(true)
+      ..play();
     super.initState();
   }
 
@@ -42,11 +80,11 @@ class _Page7State extends State<Page7> {
         width: double.infinity,
         decoration: const BoxDecoration(
           // gradient: LinearGradient(
-          //   colors: [Color(0xFFacd3d5), Color(0xFF3dc5ce), Color(0xFFacd3d5)],
+          //   colors: [Color(0xFF988ab4), Color(0xFF876fb7), Color(0xFF988ab4)],
           //   begin: Alignment.topRight,
           //   end: Alignment.bottomLeft,
           // ),
-          color: Colors.green,
+          color: Colors.black26,
         ),
         child: Center(
           child: Container(
@@ -58,53 +96,59 @@ class _Page7State extends State<Page7> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    "캐쥬얼 게임 :".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
-                    " ZigZagUp! ".text.white.size(andy(isMobile ? 40 : 35)).make(),
-                    " 멀티 플레이".text.white.size(andy(isMobile ? 30 : 25)).make(),
+                    " 데이팅 앱 러브레터 Ver.1".text.white.size(andy(isMobile ? 40 : 35)).bold.make(),
+                    " : 리뉴얼 전 버전".text.white.size(andy(isMobile ? 30 : 25)).make(),
                   ],
                 ),
                 Gap(andy(30)),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(andy(20)),
-                  child: Image.asset(
-                    "assets/frog_title.jpg",
-                    width: screenRatio < 0.7 ? screenWidth * 0.7 : screenWidth * 0.2,
-                  ),
+                Image.asset("assets/loveletter_ver1_title.png", width: andy(180)),
+                Gap(andy(10)),
+                Image.asset(
+                  "assets/loveletter_ver1.png",
+                  width: screenRatio < 0.7 ? screenWidth * 0.7 : screenWidth * 0.4,
+                  fit: BoxFit.fitWidth,
                 ),
                 Gap(andy(30)),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        ...List.generate(
-                          4,
-                          (index) {
-                            return GestureDetector(
-                                onTap: () {
-                                  showDialog(
-                                    context: context,
-                                    builder: (context) => AlertDialog(
-                                        backgroundColor: Colors.transparent,
-                                        insetPadding: EdgeInsets.zero,
-                                        contentPadding: EdgeInsets.zero,
-                                        content: Image.asset("assets/frog_$index.png", height: screenHeight * 0.7)),
-                                  );
-                                },
-                                child: Padding(
-                                  padding: EdgeInsets.all(andy(15)),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(andy(20)),
-                                    child: Image.asset(
-                                      "assets/frog_$index.png",
-                                      width: screenRatio < 0.7 ? screenWidth * 0.2 : screenWidth * 0.1,
-                                    ),
-                                  ),
-                                ));
-                          },
-                        )
-                      ],
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(andy(30)),
+                      child: SizedBox(
+                        width: screenRatio < 0.7 ? screenWidth * 0.25 : screenWidth * 0.1,
+                        child: _controller_1.value.isInitialized
+                            ? AspectRatio(
+                                aspectRatio: _controller_1.value.aspectRatio,
+                                child: VideoPlayer(_controller_1),
+                              )
+                            : const CircularProgressIndicator(),
+                      ),
+                    ),
+                    Gap(andy(50)),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(andy(30)),
+                      child: SizedBox(
+                        width: screenRatio < 0.7 ? screenWidth * 0.25 : screenWidth * 0.1,
+                        child: _controller_2.value.isInitialized
+                            ? AspectRatio(
+                                aspectRatio: _controller_2.value.aspectRatio,
+                                child: VideoPlayer(_controller_2),
+                              )
+                            : const CircularProgressIndicator(),
+                      ),
+                    ),
+                    Gap(andy(50)),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(andy(30)),
+                      child: SizedBox(
+                        width: screenRatio < 0.7 ? screenWidth * 0.25 : screenWidth * 0.1,
+                        child: _controller_3.value.isInitialized
+                            ? AspectRatio(
+                                aspectRatio: _controller_3.value.aspectRatio,
+                                child: VideoPlayer(_controller_3),
+                              )
+                            : const CircularProgressIndicator(),
+                      ),
                     ),
                   ],
                 ),
@@ -131,7 +175,7 @@ class _Page7State extends State<Page7> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "2015년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
+                          "2014년".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
                         ],
                       ),
                     ],
@@ -189,36 +233,7 @@ class _Page7State extends State<Page7> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "1인 개발".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: andy(20)),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: andy(20), horizontal: andy(30)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(andy(20)),
-                    color: Colors.black.withValues(alpha: 0.2),
-                  ),
-                  width: andy(850),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.circle, color: Colors.white, size: andy(7)),
-                          SizedBox(width: andy(10)),
-                          "특징".text.white.ellipsis.size(andy(20)).bold.make(),
-                        ],
-                      ),
-                      SizedBox(height: andy(5)),
-                      Row(
-                        children: [
-                          SizedBox(width: andy(19)),
-                          "멀티 플레이 지원으로 무작위 상대와 1:1 대결 가능.\n상당한 손맛과 속도감.".text.white.ellipsis.size(andy(20)).make(),
+                          "기획, 디자인, 개발, 배포, 마케팅  (Back-end 제외)".text.white.ellipsis.size(andy(20)).align(TextAlign.right).make(),
                         ],
                       ),
                     ],
@@ -231,5 +246,15 @@ class _Page7State extends State<Page7> {
         ),
       ),
     );
+  }
+
+  Future<void> _launchStore() async {
+    String url = "https://play.google.com/store/apps/details?id=com.zikgamez.duckshower&hl=en";
+
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+    } else {
+      print("스토어 URL 실행 실패: $url");
+    }
   }
 }
