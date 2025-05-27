@@ -232,6 +232,21 @@ class _Page5State extends State<Page5> {
                   ),
                 ),
                 SizedBox(height: andy(50)),
+                AndyButton(
+                  color: Colors.black38,
+                  width: isMobile ? andy(800) : andy(600),
+                  height: isMobile ? andy(120) : andy(90),
+                  onPressed: _launchStore,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.play_arrow_rounded, color: Colors.white, size: andy(25)),
+                      Gap(andy(5)),
+                      "구글 스토어 이동".text.size(andy(20)).white.bold.make(),
+                    ],
+                  ),
+                ),
+                Gap(screenHeight / 10),
               ],
             ),
           ),
@@ -241,7 +256,7 @@ class _Page5State extends State<Page5> {
   }
 
   Future<void> _launchStore() async {
-    String url = "https://play.google.com/store/apps/details?id=com.zikgamez.duckshower&hl=en";
+    String url = "https://play.google.com/store/apps/details?id=com.zikgamez.crossword&hl=ko";
 
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
