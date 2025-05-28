@@ -219,7 +219,7 @@ class _Page5State extends State<Page5> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "1인 개발 (취미작)\n - 퍼즐 구조 자동 생성 코드 구현\n - GPT API 를 이용한 단어 목록 생성"
+                          "1인 개발 (취미작)\n - 퍼즐 구조 자동 생성 로직 구현\n - GPT API 를 이용한 단어 목록 생성"
                               .text
                               .white
                               .ellipsis
