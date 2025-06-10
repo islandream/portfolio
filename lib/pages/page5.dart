@@ -90,7 +90,7 @@ class _Page5State extends State<Page5> {
                                                   children: [
                                                     ClipRRect(
                                                         borderRadius: BorderRadius.circular(andy(10)),
-                                                        child: Image.asset("assets/${index_h * 2 + index_v + 1}.jpg", width: screenWidth)),
+                                                        child: Image.asset("assets/${index_h + 1 + index_v * 2}.jpg", width: screenWidth)),
                                                     IconButton(
                                                       onPressed: () => Navigator.pop(context),
                                                       icon: Icon(
@@ -107,7 +107,7 @@ class _Page5State extends State<Page5> {
                                           padding: EdgeInsets.all(andy(10)),
                                           child: ClipRRect(
                                               borderRadius: BorderRadius.circular(andy(10)),
-                                              child: Image.asset("assets/${index_h * 2 + index_v + 1}.jpg", width: screenWidth * 0.45)),
+                                              child: Image.asset("assets/${index_h + 1 + index_v * 2}.jpg", width: screenWidth * 0.45)),
                                         ),
                                       ),
                                     )
