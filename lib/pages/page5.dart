@@ -59,7 +59,7 @@ class _Page5State extends State<Page5> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    " 영어 단어 및 표현 학습 크로스 퍼즐 ".text.center.size(andy(isMobile ? 40 : 35)).white.bold.make(),
+                    " 영어 단어 퍼즐 게임 & 원서 읽기 ".text.center.size(andy(isMobile ? 40 : 35)).white.bold.make(),
                   ],
                 ),
                 Gap(andy(50)),
@@ -71,7 +71,7 @@ class _Page5State extends State<Page5> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               ...List.generate(
-                                2,
+                                3,
                                 (index_v) => Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -116,25 +116,31 @@ class _Page5State extends State<Page5> {
                               ),
                             ],
                           )
-                        : Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              ...List.generate(
-                                4,
-                                (index) {
-                                  return GestureDetector(
-                                      onTap: () {
-                                        showDialog(context: context, builder: (context) => ImageDialog(path: "assets/${index + 1}.jpg"));
-                                      },
-                                      child: Padding(
-                                        padding: EdgeInsets.all(andy(10)),
-                                        child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(andy(10)),
-                                            child: Image.asset("assets/${index + 1}.jpg", width: andy(230))),
-                                      ));
-                                },
-                              )
-                            ],
+                        : Column(
+                            children: List.generate(
+                              2,
+                              (index_v) => Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  ...List.generate(
+                                    3,
+                                    (index_h) {
+                                      return GestureDetector(
+                                          onTap: () {
+                                            showDialog(
+                                                context: context, builder: (context) => ImageDialog(path: "assets/${index_h + 1 + index_v * 3}.jpg"));
+                                          },
+                                          child: Padding(
+                                            padding: EdgeInsets.all(andy(10)),
+                                            child: ClipRRect(
+                                                borderRadius: BorderRadius.circular(andy(10)),
+                                                child: Image.asset("assets/${index_h + 1 + index_v * 3}.jpg", width: andy(300))),
+                                          ));
+                                    },
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                   ],
                 ),
@@ -219,7 +225,7 @@ class _Page5State extends State<Page5> {
                       Row(
                         children: [
                           SizedBox(width: andy(19)),
-                          "1인 개발 (취미작)\n - 퍼즐 구조 자동 생성 로직 구현\n - GPT API 를 이용한 단어 목록 생성"
+                          "1인 개발 (취미작)\n - 퍼즐 구조 자동 생성 로직 구현\n - GPT API 를 이용한 단어 생성 / 영문 번역"
                               .text
                               .white
                               .ellipsis

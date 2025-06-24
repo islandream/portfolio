@@ -31,6 +31,7 @@ class _Page4State extends State<Page4> {
 
   @override
   void initState() {
+    super.initState();
 // 위젯이 그려진 후 애니메이션 실행
     WidgetsBinding.instance.addPostFrameCallback((_) {
       setState(() {
