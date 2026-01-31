@@ -61,7 +61,7 @@ class _Page9State extends State<Page9> {
                 "기타. Flutter로 만들어본 3D 큐브".text.white.center.size(andy(isMobile ? 45 : 35)).bold.make(),
               ],
             ),
-            "별거 아니지만 만들면서 너무 재밌었던 것이라 첨부해 봤습니다".text.white.center.size(andy(35)).make(),
+            "별거 아니지만 최근 재미있게 만들었던 것이라 첨부해 봤습니다".text.white.center.size(andy(35)).make(),
             "360도 돌려보세요. (마우스 또는 터치)".text.white.center.size(andy(35)).make(),
             Gap(andy(30)),
             CubeWidget(),

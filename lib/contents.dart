@@ -1,4 +1,5 @@
 import 'package:andy_portfolio/pages/first_page.dart';
+import 'package:andy_portfolio/pages/page0.dart';
 import 'package:andy_portfolio/pages/page3.dart';
 import 'package:andy_portfolio/pages/page4.dart';
 import 'package:andy_portfolio/pages/page5.dart';
@@ -60,7 +61,7 @@ class _ResponsiveScreenState extends State<ResponsiveScreen> {
                 padding: EdgeInsets.only(top: titleBarHeight - 1),
                 child: ListView.builder(
                   controller: _scrollController,
-                  itemCount: 10,
+                  itemCount: 11,
                   cacheExtent: 1,
                   itemBuilder: (context, index) {
                     return SizedBox(
@@ -126,20 +127,22 @@ Widget getPage(int index) {
     case 1:
       return SecondPage();
     case 2:
-      return Page3();
+      return Page0();
     case 3:
-      return Page4();
+      return Page3();
     case 4:
-      return Page5();
+      return Page4();
     case 5:
-      return Page6();
+      return Page5();
     case 6:
-      return Page7();
+      return Page6();
     case 7:
-      return Page8();
+      return Page7();
     case 8:
-      return Page9();
+      return Page8();
     case 9:
+      return Page9();
+    case 10:
       return Page10();
 
     default:
